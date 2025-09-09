@@ -1,0 +1,114 @@
+<!-- Lab Assignment 
+ 
+Task: Create a profile card layout using the box model. The profile card should 
+include: 
+o A profile picture.  
+o The user’s name and bio. 
+o A button to "Follow" the user. 
+ 
+Additional Requirements: 
+ 
+o Add padding and borders to the elements. 
+o Ensure the layout is clean and centered on the page using CSS margins. 
+o Use the box-sizing property to demonstrate both content-box and border-box 
+on different elements.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Box Model Card Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>  
+      *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+      }   
+        .container{
+              height: 470px;
+              width:320px;
+              /* border: 2px solid; */
+              margin: 150px auto;
+              background-color:palegoldenrod;
+              box-shadow: 0px 0px 20px black;
+             
+        }
+        .profile-card, .profile-pic{
+                height: 150px;
+                width: 150px;
+                margin:10% auto;
+                border-radius: 50%;
+        }
+        h1{
+            padding: 20px;
+            font-size: 30px;
+            font-family: sans-serif;
+            color:gray;
+            text-align: center;
+        }
+        p{
+            font-family: sans-serif;
+            color: gray;
+            text-align: center;
+            font-weight: bold;
+        }
+        .icon {
+                margin-top: 5px;
+                font-size: 2.1rem;
+                text-align: center;      
+        }
+        #linkedin{
+            color:rgb(18, 55, 219)
+        }
+        #whatsapp{
+            color: rgb(41, 210, 8);
+        }
+       #instagram{
+          color: rgb(214, 8, 132);
+       }
+       #facebook{
+         color:blue;
+       }
+       .btn input{
+          
+          margin-top: 30px;
+          margin-left:70px;
+          padding:20px 60px;
+          align-items: center;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: blue;
+          border-radius: 15px;
+          color:white;
+          border: none;
+       }
+       .btn:hover input{
+        background-color:aqua;
+        color:black;
+       }
+    </style>
+</head>
+<body>
+         <div class="container">
+            <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoOl4EginQGk0VasF5G3KsCccxn6J6Qq6-LmAD6mUT0kxRW9ZwnTl78br5ICW3bW-w6nE&usqp=CAU" alt="" class="profile-pic">
+            </div>
+            <h1>Rupali Sharma</h1>
+            <p>Software Engineer | Microsoft Company</p><br>
+            <hr>
+            <div class="icon">
+            <a href="#" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" id="whatsapp"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a href="#" id="instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#" id="facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="btn">
+                <span><input type="submit" value="Follow"></span>
+            </div>
+         </div>
+</body>
+</html>
